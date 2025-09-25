@@ -1,68 +1,272 @@
-body {
+/* Reset and base styling */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: "Segoe UI", Tahoma, sans-serif;
   line-height: 1.6;
-  background: #fdfdfd;
+  background: #fafafa;
+  color: #222;
+}
+
+/* --- Navigation --- */
+header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
   color: #333;
 }
 
-header {
-  background: #111;
-  color: #fff;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-}
-
-nav {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
-nav a {
-  color: #fff;
+.nav-links a {
   text-decoration: none;
+  color: #555;
+  transition: color 0.3s;
 }
 
-#hero {
-  background: linear-gradient(to right, #0f172a, #1e293b);
+.nav-links a:hover,
+.nav-links a.active {
+  color: #007acc;
+}
+
+/* Mobile toggle */
+.mobile-menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #fff;
+    display: none;
+    border-top: 1px solid #ddd;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+
+/* --- Hero Section --- */
+.section-hero {
+  background: linear-gradient(to right, #0c1a2c, #1b2f47);
   color: #fff;
+  padding: 4rem 1rem;
   text-align: center;
-  padding: 6rem 2rem;
 }
 
-#hero h2 {
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+}
+
+.profile-pic img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.hero-text h1 {
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.btn {
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.quick-highlights {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.btn-primary {
   display: inline-block;
   margin-top: 1rem;
-  padding: 0.7rem 1.2rem;
+  padding: 0.8rem 1.5rem;
   background: #38bdf8;
   color: #111;
-  border-radius: 8px;
+  border: none;
+  border-radius: 6px;
   text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-section {
-  width: 85%;
-  margin: 2rem auto;
+.btn-primary:hover {
+  background: #0ea5e9;
 }
 
-footer {
-  background: #111;
+/* --- Sections --- */
+.section-light {
+  background: #fff;
+  padding: 3rem 1rem;
+}
+
+.section-dark {
+  background: #f0f4f8;
+  padding: 3rem 1rem;
+}
+
+.section-highlight {
+  background: #e0f2fe;
+  padding: 3rem 1rem;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.section-inner h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* --- Featured Publication --- */
+.featured-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.featured-card img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+}
+
+.featured-text h3 {
+  color: #007acc;
+  margin-bottom: 0.5rem;
+}
+
+.featured-text p {
+  margin-bottom: 0.8rem;
+}
+
+/* --- Publications --- */
+.pub-item {
+  margin-bottom: 2rem;
+}
+
+.pub-item img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+}
+
+.pub-item h3 {
+  font-size: 1.25rem;
+  color: #007acc;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Badge Grid --- */
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+  justify-items: center;
+}
+
+.badge-grid img {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.badge-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* --- Back to top --- */
+#back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: #007acc;
   color: #fff;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+#back-to-top:hover {
+  background: #005fa3;
+}
+
+/* --- Footer --- */
+footer {
+  background: #333;
+  color: #eee;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   margin-top: 2rem;
+}
+
+.footer-inner p {
+  margin: 0;
 }
