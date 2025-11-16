@@ -6,6 +6,15 @@
   <title>Animesh Banik | Quantum Information Researcher</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 <body>
 
@@ -199,35 +208,74 @@
     </div>
   </section>
 
-  <!-- CERTIFICATES WITH THUMBNAILS -->
-  <section id="certificates" class="section-light">
-    <div class="section-inner">
-      <h2>Certificates</h2>
-      <div class="badge-grid">
-        <a href="https://drive.google.com/file/d/1r5SAPKUcbbzwrJa2q0g1ms6ieIlqgaMh/view?usp=sharing" target="_blank">
-          <img src="badges/Animesh Banik_Qiskit_Fall_Fest.png" alt="Animesh Banik Qiskit Fall Fest Participation Certificate.pdf">
-        <a href="https://drive.google.com/file/d/1aJLMTUEe4IMs9eDMEVqDAPaIEpqz8XxB/view?usp=drive_link" target="_blank">
-          <img src="badges/ICPSDT 2025 best oral presenter.jpg" alt="ICPSDT 2025 best oral presenter" />
-        <a href="https://drive.google.com/file/d/151RzsD5vE7D8bOdFvs69MZE8XGhjT4oR/view?usp=sharing" target="_blank">
-          <img src="badges/QTraining10-3.jpg" alt="Qtrainning for QBronze" />  
-        <a href="https://drive.google.com/file/d/1tjzxOR2oxyre46-nhrvqjQN4A4odrpCC/view?usp=drive_link" target="_blank">
-          <img src="badges/socials_image.jpg" alt="IBM Qiskit Advocate Badge" />
-        <a href="https://www.credly.com/badges/85cadf94-e9c6-41ec-86e0-eb6a9a56e3b0/linked_in?t=t1pqot" target="_blank">
-          <img src="badges/ibm-quantum.png" alt="IBM Quantum Excellence Badge" />
-        </a>
-        <a href="https://pennylane.ai/profile/Animesh/certificate/pennylane-certificate-womanium-wiser-lcu-2025" target="_blank">
-          <img src="badges/pennylane-lcu.svg" alt="PennyLane LCU Certificate" />
-        </a>
-        <a href="https://pennylane.ai/profile/Animesh/certificate/pennylane-certificate-womanium-wiser-trotterization-2025" target="_blank">
-          <img src="badges/pennylane-trotter.svg" alt="PennyLane Trotterization Certificate" />
-        </a>
-        <a href="https://drive.google.com/file/d/1aG6ihg9P1v4oaheiLHlB9RozaTZUqRkX/view?usp=sharing" target="_blank">
-          <img src="badges/qbronze.jpg" alt="QBronze Diploma" />
-        </a>
-      </div>
-    </div>
-  </section>
+<section id="certificates" class="section-light">
+  <div class="section-inner">
+    <h2>Certificates</h2>
 
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <a href="https://drive.google.com/file/d/1r5SAPKUcbbzwrJa2q0g1ms6ieIlqgaMh/view?usp=sharing" target="_blank">
+            <img src="badges/Animesh Banik_Qiskit_Fall_Fest.png" alt="Qiskit Fall Fest Certificate">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="https://drive.google.com/file/d/1aJLMTUEe4IMs9eDMEVqDAPaIEpqz8XxB/view?usp=drive_link" target="_blank">
+            <img src="badges/ICPSDT 2025 best oral presenter.jpg" alt="ICPSDT 2025 Best Oral Presenter">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="https://drive.google.com/file/d/151RzsD5vE7D8bOdFvs69MZE8XGhjT4oR/view?usp=sharing" target="_blank">
+            <img src="badges/QTraining10-3.jpg" alt="QTraining QBronze">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="https://drive.google.com/file/d/1tjzxOR2oxyre46-nhrvqjQN4A4odrpCC/view?usp=drive_link" target="_blank">
+            <img src="badges/socials_image.jpg" alt="IBM Qiskit Advocate">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="https://www.credly.com/badges/85cadf94-e9c6-41ec-86e0-eb6a9a56e3b0/linked_in?t=t1pqot" target="_blank">
+            <img src="badges/ibm-quantum.png" alt="IBM Quantum Excellence Badge">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="https://pennylane.ai/profile/Animesh/certificate/pennylane-certificate-womanium-wiser-lcu-2025" target="_blank">
+            <img src="badges/pennylane-lcu.svg" alt="PennyLane LCU Certificate">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="https://pennylane.ai/profile/Animesh/certificate/pennylane-certificate-womanium-wiser-trotterization-2025" target="_blank">
+            <img src="badges/pennylane-trotter.svg" alt="PennyLane Trotterization Certificate">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="https://drive.google.com/file/d/1aG6ihg9P1v4oaheiLHlB9RozaTZUqRkX/view?usp=sharing" target="_blank">
+            <img src="badges/qbronze.jpg" alt="QBronze Diploma">
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+    </div>
+  </div>
+</section>
   <section id="contact" class="section-dark">
     <div class="section-inner">
       <h2>Contact</h2>
