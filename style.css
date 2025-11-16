@@ -214,6 +214,13 @@ header {
   margin-bottom: 0.5rem;
 }
 
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 /* --- Badge Grid --- */
 .badge-grid {
   display: grid;
