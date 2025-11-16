@@ -7,15 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
-<script>
-  const carousel = document.querySelector(".carousel");
-  document.querySelector(".carousel-btn.left").onclick = () => {
-    carousel.scrollBy({ left: -300, behavior: "smooth" });
-  };
-  document.querySelector(".carousel-btn.right").onclick = () => {
-    carousel.scrollBy({ left: 300, behavior: "smooth" });
-  };
-</script>
+
 
 <body>
 
@@ -276,6 +268,14 @@
       <p>© 2025 Animesh Banik | Quantum Information Researcher</p>
     </div>
   </footer>
-
+<script>
+  const carousel = document.querySelector(".carousel");
+  document.querySelector(".carousel-btn.left").onclick = () => {
+    carousel.scrollBy({ left: -300, behavior: "smooth" });
+  };
+  document.querySelector(".carousel-btn.right").onclick = () => {
+    carousel.scrollBy({ left: 300, behavior: "smooth" });
+  };
+</script>
 </body>
 </html>
