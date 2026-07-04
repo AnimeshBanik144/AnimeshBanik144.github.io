@@ -22,7 +22,7 @@ header {
 }
 
 .nav-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   padding: 0.5rem 1rem;
   display: flex;
@@ -40,7 +40,9 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  justify-content: flex-end;
+  /* gap: 1.2rem; */
+  gap: 25px;
 }
 
 .nav-links a {
@@ -168,6 +170,45 @@ header {
   color: #333;
 }
 
+/* --- Research Interests --- */
+.research-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates exactly 3 equal columns */
+  gap: 20px; /* Matches the spacing of your projects */
+}
+
+.research-item {
+  border-left: 4px solid #0056b3; /* Matches your project blue line */
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 0 5px 5px 0;
+  transition: transform 0.2s ease;
+  
+  /* Text styling to make it look bold and centered vertically */
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.research-item:hover {
+  transform: translateX(5px); /* Matches the hover effect of your projects */
+}
+
+/* --- Mobile Responsiveness for Research Grid --- */
+@media (max-width: 900px) {
+  .research-list {
+    grid-template-columns: repeat(2, 1fr); /* Drops to 2 columns on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .research-list {
+    grid-template-columns: 1fr; /* Drops to 1 column on mobile phones */
+  }
+}
+
 /* --- Featured Publication --- */
 .featured-card {
   display: flex;
@@ -212,6 +253,85 @@ header {
   font-size: 1.25rem;
   color: #007acc;
   margin-bottom: 0.5rem;
+}
+
+/* --- Poster Grid Layout --- */
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on laptop */
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.poster-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.poster-card:hover {
+  transform: translateY(-5px); /* Gentle lift effect when hovering */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.poster-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.poster-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Mobile Responsiveness: Stack them vertically */
+@media (max-width: 768px) {
+  .poster-grid {
+    grid-template-columns: 1fr; /* 1 column on phones */
+  }
+}
+
+/* --- Ongoing Projects --- */
+.project-list {  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-item {
+  border-left: 4px solid #0056b3; /* A professional academic blue line */
+  padding-left: 15px;
+  background-color: #f9f9f9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  border-radius: 0 5px 5px 0;
+  transition: transform 0.2s ease;
+}
+
+.project-item:hover {
+  transform: translateX(5px); /* Adds a slight, elegant hover effect */
+}
+
+.project-title {
+  margin: 0 0 8px 0;
+  font-size: 1.25em;
+  color: #333;
+  font-weight: 600;
+}
+
+.project-desc {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
 }
 
 .carousel-container {
