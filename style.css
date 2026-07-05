@@ -417,19 +417,31 @@ header {
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding-bottom: 10px;
+  /* CRITICAL: Added top, left, and right padding so the 3D lift and shadows 
+     have room to breathe and do not get clipped by the container's overflow */
+  padding: 10px 15px 15px 15px; 
 }
 
 .carousel img {
-  height: 130px;
+  height: 210px;
   width: auto;
   border-radius: 8px;
   object-fit: contain;
-  transition: transform 0.2s ease;
+  
+  /* 3D Effects */
+  border: 1px solid #e2e8f0; /* Subtle grey border to define the certificate paper edge */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft, realistic baseline shadow */
+  
+  /* Smooth transition for both lifting up and shadow deepening */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .carousel img:hover {
-  transform: scale(1.05);
+  /* Combines a subtle scale with a physical upward lift */
+  transform: translateY(-6px) scale(1.02); 
+  
+  /* Deeper, softer shadow to simulate the certificate moving closer to the viewer */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
 }
 
 .carousel::-webkit-scrollbar {
